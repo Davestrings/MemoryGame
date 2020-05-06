@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex; /*helps to center vertically*/
+    background: #060AB2;
+}
+.memory-game{
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid lime;
+}
+.memory-card{
+    width: calc(25% - 10px);/*To factor in the effect of adding a 5px margin*/
+    height: calc(33.33% - 10px);
+    position: relative;
+    margin: 5px;
+    transform: scale(1);
+    /* border: 2px solid aqua; */
+}
+.memory-card:active{
+    transform: scale(.90);
+    transition: transform 0.2s;
+}
+.front-face,
+.back-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #1c7ccc;
+    border: 2px solid deeppink;
+}
